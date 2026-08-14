@@ -1,0 +1,31 @@
+{
+  "type": "level",
+  "id": "you/planets",
+  "name": "planets",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "661c322e72bf7841",
+  "spec": {
+    "wall_specs": [],
+    "world_width": 3200,
+    "world_height": 1400,
+    "biome_index": 0,
+    "terrain": "planets",
+    "bounds": "walls",
+    "shots_wrap": false,
+    "gravity": "planets",
+    "gravity_feel": "controlled",
+    "planet_shape": "mixed",
+    "terrain_physics": "rigid",
+    "cam_restrict": true,
+    "cam_distance": 1400,
+    "cam_over_time": "hold",
+    "timing": "turn_based",
+    "turn_order": "round_robin",
+    "win": "last_standing",
+    "chase": false,
+    "chase_axis": "x"
+  },
+  "deps": []
+}

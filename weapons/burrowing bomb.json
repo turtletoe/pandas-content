@@ -1,0 +1,45 @@
+{
+  "type": "weapon",
+  "id": "you/burrowing bomb",
+  "name": "burrowing bomb",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "8596a06413790886",
+  "spec": {
+    "name": "burrowing bomb",
+    "delivery": "launched",
+    "count": 1,
+    "spread": 0.0,
+    "grav": 0.08,
+    "speed": 1.15,
+    "bounce": 0.0,
+    "fuse": 0.0,
+    "wind_factor": 1.0,
+    "burrow": true,
+    "bore": 14,
+    "piloted": true,
+    "graphic": "rocket",
+    "cost": 0,
+    "rules": [
+      {
+        "trigger": "impact",
+        "effects": [
+          {
+            "fx": "carve",
+            "radius": 28,
+            "shape": "round",
+            "length": 0
+          },
+          {
+            "fx": "damage",
+            "amount": 45,
+            "knockback": 8.0,
+            "radius": 28
+          }
+        ]
+      }
+    ]
+  },
+  "deps": []
+}
