@@ -1,0 +1,117 @@
+{
+  "type": "weapon",
+  "id": "you/Test Published Weapon",
+  "name": "Test Published Weapon",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "582ad47ab27d431b",
+  "spec": {
+    "version": 2,
+    "name": "Test Published Weapon",
+    "cost": 3006,
+    "particles": [
+      {
+        "name": "Cluster Missile",
+        "primary": true,
+        "graphic": "clusterbomb",
+        "forward": "Right",
+        "count": 8,
+        "spread": 243,
+        "gravity": 0.12,
+        "launch_power": 1,
+        "bounce": 0,
+        "wind": 1,
+        "thrust": 0.4,
+        "steer": 0.25,
+        "max_speed": 8,
+        "walk_speed": 0.6,
+        "jump_power": 4,
+        "turn_at_obstacles": true,
+        "start_direction": "Away",
+        "range_px": 1200,
+        "type": "projectile",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "hit_terrain",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "cooldown": 0,
+            "effects": [
+              {
+                "fx": "damage_terrain",
+                "size": 22,
+                "force": 5,
+                "player_damage": 28,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0,
+                "affects": "everyone"
+              },
+              {
+                "fx": "spawn",
+                "target": "Cluster Bomb",
+                "inherit": 0,
+                "rise": 4
+              }
+            ]
+          }
+        ],
+        "fx": []
+      },
+      {
+        "name": "Cluster Bomb",
+        "primary": false,
+        "graphic": "clusterbomb",
+        "forward": "Right",
+        "count": 12,
+        "spread": 100,
+        "gravity": 0.12,
+        "launch_power": 4,
+        "bounce": 0,
+        "wind": 1,
+        "thrust": 0.4,
+        "steer": 0.25,
+        "max_speed": 8,
+        "walk_speed": 0.6,
+        "jump_power": 4,
+        "turn_at_obstacles": true,
+        "start_direction": "Away",
+        "range_px": 1200,
+        "type": "projectile",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "hit_terrain",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "cooldown": 0,
+            "effects": [
+              {
+                "fx": "damage_terrain",
+                "size": 13,
+                "force": 3,
+                "player_damage": 14,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0,
+                "affects": "everyone"
+              }
+            ]
+          }
+        ],
+        "fx": []
+      }
+    ]
+  },
+  "deps": []
+}
