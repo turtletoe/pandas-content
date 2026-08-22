@@ -1,0 +1,119 @@
+{
+  "type": "weapon",
+  "id": "you/test walker online",
+  "name": "test walker online",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "f620beb6e58f4245",
+  "spec": {
+    "version": 2,
+    "name": "test walker online",
+    "spawn_point": "player",
+    "rain_drops": 14,
+    "rain_wave_time": 1.2,
+    "rain_gap": 0.6,
+    "cost": 5109,
+    "particles": [
+      {
+        "name": "Cluster Missile",
+        "primary": true,
+        "graphic": "clusterbomb",
+        "forward": "Right",
+        "count": 12,
+        "spread": 133,
+        "gravity": 0.12,
+        "launch_power": 1,
+        "bounce": 0,
+        "wind": 0,
+        "fly_speed": 5,
+        "steer": 0.25,
+        "walk_speed": 0.6,
+        "jump_power": 4,
+        "start_direction": "Away",
+        "walker_health": 40,
+        "range_px": 1200,
+        "type": "walking",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "command",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "build_terrain",
+                "size": 28,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0
+              },
+              {
+                "fx": "spawn",
+                "target": "Cluster Bomb",
+                "inherit": 0,
+                "rise": 4,
+                "aim": "Up"
+              }
+            ]
+          }
+        ],
+        "fx": []
+      },
+      {
+        "name": "Cluster Bomb",
+        "primary": false,
+        "graphic": "clusterbomb",
+        "forward": "Right",
+        "count": 5,
+        "spread": 100,
+        "gravity": 0.12,
+        "launch_power": 4,
+        "bounce": 0,
+        "wind": 1,
+        "fly_speed": 5,
+        "steer": 0.25,
+        "walk_speed": 0.6,
+        "jump_power": 4,
+        "start_direction": "Away",
+        "walker_health": 40,
+        "range_px": 1200,
+        "type": "projectile",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "hit_terrain",
+            "then": "die",
+            "nth": 4,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "damage_terrain",
+                "size": 60,
+                "force": 3,
+                "player_damage": 14,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0,
+                "affects": "everyone"
+              }
+            ]
+          }
+        ],
+        "fx": []
+      }
+    ]
+  },
+  "deps": []
+}
