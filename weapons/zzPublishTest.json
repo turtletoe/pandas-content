@@ -1,0 +1,68 @@
+{
+  "type": "weapon",
+  "id": "claude-test/zzPublishTest",
+  "name": "zzPublishTest",
+  "author": "claude-test",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "738bd396a8faff4d",
+  "spec": {
+    "version": 2,
+    "name": "Sheep",
+    "spawn_point": "player",
+    "rain_drops": 14,
+    "rain_wave_time": 1.2,
+    "rain_gap": 0.6,
+    "cost": 79,
+    "particles": [
+      {
+        "name": "Sheep",
+        "primary": true,
+        "graphic": "bomb",
+        "forward": "Right",
+        "count": 1,
+        "spread": 0,
+        "gravity": 0.08,
+        "launch_power": 1.15,
+        "bounce": 0,
+        "wind": 1,
+        "fly_speed": 5,
+        "steer": 3,
+        "walk_speed": 1.4,
+        "jump_power": 1,
+        "start_direction": "Away",
+        "walker_health": 40,
+        "range_px": 1200,
+        "type": "walking",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "timer",
+            "then": "die",
+            "nth": 1,
+            "duration": 5,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "damage_terrain",
+                "size": 34,
+                "force": 10,
+                "player_damage": 45,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0,
+                "affects": "everyone"
+              }
+            ]
+          }
+        ],
+        "fx": []
+      }
+    ]
+  },
+  "deps": []
+}
