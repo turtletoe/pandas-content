@@ -5,7 +5,7 @@
   "author": "you",
   "schema": 1,
   "engine_min": "0.2.0",
-  "hash": "e4ee1fa426d85cda",
+  "hash": "fb49190fbbd144e5",
   "spec": {
     "version": 2,
     "name": "Wet Sheep 3",
@@ -13,7 +13,7 @@
     "rain_drops": 14,
     "rain_wave_time": 1.2,
     "rain_gap": 0.6,
-    "held": "",
+    "held": "00651",
     "cost": 0,
     "particles": [
       {
