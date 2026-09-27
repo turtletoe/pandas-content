@@ -5,7 +5,7 @@
   "author": "you",
   "schema": 1,
   "engine_min": "0.2.0",
-  "hash": "af18a78210500b74",
+  "hash": "41189e7d82a967d9",
   "spec": {
     "version": 2,
     "name": "Wet Sheep",
@@ -13,7 +13,7 @@
     "rain_drops": 14,
     "rain_wave_time": 1.2,
     "rain_gap": 0.6,
-    "held": "",
+    "held": "00651",
     "cost": 0,
     "particles": [
       {
@@ -21,7 +21,7 @@
         "primary": true,
         "graphic": "00615",
         "art_scale": 1,
-        "count": 12,
+        "count": 1,
         "spread": 133,
         "gravity": 0.12,
         "launch_power": 1,
