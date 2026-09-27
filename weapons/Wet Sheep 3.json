@@ -1,0 +1,201 @@
+{
+  "type": "weapon",
+  "id": "you/Wet Sheep 3",
+  "name": "Wet Sheep 3",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "e4ee1fa426d85cda",
+  "spec": {
+    "version": 2,
+    "name": "Wet Sheep 3",
+    "spawn_point": "player",
+    "rain_drops": 14,
+    "rain_wave_time": 1.2,
+    "rain_gap": 0.6,
+    "held": "",
+    "cost": 0,
+    "particles": [
+      {
+        "name": "Cluster Missile",
+        "primary": true,
+        "graphic": "00615",
+        "art_scale": 1,
+        "count": 1,
+        "spread": 133,
+        "gravity": 0.12,
+        "launch_power": 1,
+        "bounce": 0,
+        "wind": 0,
+        "fly_speed": 5,
+        "steer": 0.25,
+        "walk_speed": 0.6,
+        "jump_power": 4,
+        "start_direction": "Away",
+        "range_px": 1200,
+        "emits": "",
+        "emit_rate": 3,
+        "emit_speed": 2.4,
+        "emit_spread": 9,
+        "emit_seconds": 0.5,
+        "type": "walking",
+        "terrain": "collide",
+        "triggers": [
+          {
+            "kind": "timer",
+            "then": "die",
+            "nth": 1,
+            "duration": 3.2,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "emit_substance",
+                "material": "Water",
+                "amount": 39,
+                "speed": 3,
+                "spread": 10,
+                "inherit": 0.6
+              },
+              {
+                "fx": "emit_fx",
+                "target": "FX 1"
+              }
+            ]
+          }
+        ],
+        "fx": [
+          {
+            "name": "FX 1",
+            "graphic": "ember",
+            "lifetime": {
+              "lo": 0.4,
+              "hi": null
+            },
+            "size": {
+              "lo": 2.5,
+              "hi": null
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "point",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 40,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 0,
+                "length": 0,
+                "spread_deg": 360,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 2,
+                  "hi": null
+                },
+                "direction": "cone",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "drag",
+                "amount": 0.1
+              },
+              {
+                "module": "collide",
+                "mode": "die",
+                "restitution": 0.4
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      1,
+                      0.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        255,
+                        196,
+                        92
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        255,
+                        120,
+                        32
+                      ]
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "blend",
+                "mode": "additive"
+              },
+              {
+                "module": "spawn_fx_on_death",
+                "target": "Smoke Puff",
+                "when": "expired",
+                "count": {
+                  "lo": 3,
+                  "hi": null
+                }
+              },
+              {
+                "module": "spawn_fx_on_death",
+                "target": "Scorch",
+                "when": "hit_terrain",
+                "count": {
+                  "lo": 1,
+                  "hi": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "deps": []
+}
