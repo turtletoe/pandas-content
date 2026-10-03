@@ -1,0 +1,950 @@
+{
+  "type": "weapon",
+  "id": "you/Moon Seed 2",
+  "name": "Moon Seed 2",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "ae65baa19080d09c",
+  "spec": {
+    "version": 2,
+    "name": "Moon Seed 2",
+    "spawn_point": "player",
+    "rain_drops": 14,
+    "rain_wave_time": 1.2,
+    "rain_gap": 0.6,
+    "rain_target": "whole_map",
+    "rain_width": 200,
+    "rain_angle": 0,
+    "rain_random": false,
+    "rain_speed": 0,
+    "rain_delivery": "none",
+    "held": "00645",
+    "cost": 798,
+    "particles": [
+      {
+        "name": "Seed",
+        "primary": true,
+        "graphic": "00694",
+        "art_scale": 1,
+        "count": 2,
+        "spread": 116,
+        "gravity": 0.07,
+        "launch_power": 2.6,
+        "bounce": 0,
+        "wind": 1,
+        "fly_speed": 5,
+        "steer": 3,
+        "walk_speed": 1,
+        "jump_power": 1,
+        "start_direction": "Away",
+        "range_px": 1200,
+        "emits": "",
+        "emit_rate": 3,
+        "emit_speed": 2.4,
+        "emit_spread": 9,
+        "emit_seconds": 0.5,
+        "persist": false,
+        "turn_rate": 4,
+        "seek_after": 0.5,
+        "seek_for": 0,
+        "lock_on": 0.8,
+        "dig_speed": 2,
+        "tunnel_width": 16,
+        "dig_for": 2,
+        "max_fall": 0,
+        "angle_vary": 15,
+        "speed_vary": 0.55,
+        "type": "projectile",
+        "terrain": "collide",
+        "homing": "off",
+        "triggers": [
+          {
+            "kind": "spawn",
+            "then": "continue",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "emit_fx",
+                "target": "Trail"
+              }
+            ]
+          },
+          {
+            "kind": "command",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "spawn",
+                "target": "Moon",
+                "inherit": 0,
+                "rise": 0,
+                "aim": "Up"
+              }
+            ]
+          },
+          {
+            "kind": "hit_terrain",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "spawn",
+                "target": "Moon",
+                "inherit": 0,
+                "rise": 0,
+                "aim": "Up"
+              }
+            ]
+          }
+        ],
+        "fx": [
+          {
+            "name": "Trail",
+            "graphic": "smoke",
+            "lifetime": {
+              "lo": 0.5,
+              "hi": 0.9
+            },
+            "size": {
+              "lo": 1.8,
+              "hi": 2.6
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "point",
+                "sampling": "volume",
+                "mode": "rate",
+                "count": {
+                  "lo": 12,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 40,
+                "radius": 0,
+                "length": 0,
+                "spread_deg": 360,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 0.05,
+                  "hi": 0.25
+                },
+                "direction": "random",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "drag",
+                "amount": 0.08
+              },
+              {
+                "module": "wind",
+                "influence": 0.4
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.8
+                    ],
+                    [
+                      1,
+                      2.2
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.7
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        235,
+                        232,
+                        226
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        170,
+                        170,
+                        172
+                      ]
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Moon",
+        "primary": false,
+        "graphic": "00695",
+        "art_scale": 10.4,
+        "count": 1,
+        "spread": 0,
+        "gravity": 0,
+        "launch_power": 0,
+        "bounce": 0,
+        "wind": 0,
+        "fly_speed": 5,
+        "steer": 3,
+        "walk_speed": 1,
+        "jump_power": 1,
+        "start_direction": "Away",
+        "range_px": 1200,
+        "emits": "",
+        "emit_rate": 3,
+        "emit_speed": 2.4,
+        "emit_spread": 9,
+        "emit_seconds": 0.5,
+        "persist": true,
+        "turn_rate": 4,
+        "seek_after": 0.5,
+        "seek_for": 0,
+        "lock_on": 0.8,
+        "dig_speed": 2,
+        "tunnel_width": 16,
+        "dig_for": 2,
+        "max_fall": 0,
+        "type": "placed",
+        "terrain": "collide",
+        "homing": "off",
+        "triggers": [
+          {
+            "kind": "spawn",
+            "then": "continue",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "build_terrain",
+                "size": 68,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Dust"
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Clods"
+              },
+              {
+                "fx": "gravity_well",
+                "strength": 1,
+                "radius": 68,
+                "seconds": 3,
+                "while_alive": true,
+                "planet": true
+              }
+            ]
+          },
+          {
+            "kind": "caught_in_blast",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "damage_terrain",
+                "size": 68,
+                "force": 9,
+                "player_damage": 30,
+                "brush": "circle",
+                "rotation": 0,
+                "rough": false,
+                "length": 0,
+                "affects": "everyone"
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Flash"
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Fireball"
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Debris"
+              },
+              {
+                "fx": "emit_fx",
+                "target": "Smoke"
+              }
+            ]
+          }
+        ],
+        "fx": [
+          {
+            "name": "Dust",
+            "graphic": "smoke",
+            "lifetime": {
+              "lo": 1,
+              "hi": 1.8
+            },
+            "size": {
+              "lo": 9.520000000000001,
+              "hi": 14.96
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "ring",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 24,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 68,
+                "length": 0,
+                "spread_deg": 180,
+                "base_deg": -180,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 0.3,
+                  "hi": 0.9
+                },
+                "direction": "radial",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "drag",
+                "amount": 0.06
+              },
+              {
+                "module": "gravity",
+                "scale": -0.008
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.7
+                    ],
+                    [
+                      1,
+                      1.8
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0.1,
+                      0.7
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        150,
+                        112,
+                        74
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        196,
+                        170,
+                        138
+                      ]
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "name": "Clods",
+            "graphic": "smoke",
+            "lifetime": {
+              "lo": 0.6,
+              "hi": 1.1
+            },
+            "size": {
+              "lo": 2,
+              "hi": 3
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "ring",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 17,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 68,
+                "length": 0,
+                "spread_deg": 180,
+                "base_deg": -180,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 1.5,
+                  "hi": 3
+                },
+                "direction": "radial",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "gravity",
+                "scale": 0.14
+              },
+              {
+                "module": "collide",
+                "mode": "die",
+                "restitution": 0.4
+              },
+              {
+                "module": "tint",
+                "color": [
+                  110,
+                  78,
+                  50
+                ],
+                "variance": 0.15
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      0.8,
+                      1
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "soft_dot",
+                "halo_shift": 0.1,
+                "core_alpha": 1,
+                "halo_alpha": 0
+              }
+            ]
+          },
+          {
+            "name": "Flash",
+            "graphic": "flame",
+            "lifetime": {
+              "lo": 0.07,
+              "hi": null
+            },
+            "size": {
+              "lo": 40.8,
+              "hi": null
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "point",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 1,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 0,
+                "length": 0,
+                "spread_deg": 360,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.6
+                    ],
+                    [
+                      1,
+                      1.3
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        255,
+                        250,
+                        225
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        255,
+                        190,
+                        90
+                      ]
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "blend",
+                "mode": "additive"
+              }
+            ]
+          },
+          {
+            "name": "Fireball",
+            "graphic": "flame",
+            "lifetime": {
+              "lo": 0.3,
+              "hi": 0.6
+            },
+            "size": {
+              "lo": 10.88,
+              "hi": 17.68
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "circle",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 54,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 17,
+                "length": 0,
+                "spread_deg": 360,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 2.04,
+                  "hi": 5.44
+                },
+                "direction": "radial",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "drag",
+                "amount": 0.12
+              },
+              {
+                "module": "gravity",
+                "scale": -0.02
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.8
+                    ],
+                    [
+                      0.3,
+                      1.2
+                    ],
+                    [
+                      1,
+                      0.4
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      0.6,
+                      0.8
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        255,
+                        240,
+                        170
+                      ]
+                    ],
+                    [
+                      0.35,
+                      [
+                        255,
+                        150,
+                        40
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        170,
+                        50,
+                        20
+                      ]
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "blend",
+                "mode": "additive"
+              },
+              {
+                "module": "spawn_fx_on_death",
+                "target": "Smoke",
+                "when": "expired",
+                "count": {
+                  "lo": 0,
+                  "hi": 1
+                }
+              }
+            ]
+          },
+          {
+            "name": "Debris",
+            "graphic": "smoke",
+            "lifetime": {
+              "lo": 0.7,
+              "hi": 1.3
+            },
+            "size": {
+              "lo": 2,
+              "hi": 3.2
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "point",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 41,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 0,
+                "length": 0,
+                "spread_deg": 150,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 4.760000000000001,
+                  "hi": 9.520000000000001
+                },
+                "direction": "cone",
+                "cone_deg": 150,
+                "inherit": 0
+              },
+              {
+                "module": "gravity",
+                "scale": 0.14
+              },
+              {
+                "module": "collide",
+                "mode": "die",
+                "restitution": 0.4
+              },
+              {
+                "module": "tint",
+                "color": [
+                  96,
+                  66,
+                  44
+                ],
+                "variance": 0.15
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      1
+                    ],
+                    [
+                      0.8,
+                      1
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "soft_dot",
+                "halo_shift": 0.1,
+                "core_alpha": 1,
+                "halo_alpha": 0
+              }
+            ]
+          },
+          {
+            "name": "Smoke",
+            "graphic": "smoke",
+            "lifetime": {
+              "lo": 1.6,
+              "hi": 2.6
+            },
+            "size": {
+              "lo": 12.24,
+              "hi": 19.040000000000003
+            },
+            "include_in_presets": false,
+            "modules": [
+              {
+                "module": "emission",
+                "shape": "circle",
+                "sampling": "volume",
+                "mode": "burst",
+                "count": {
+                  "lo": 17,
+                  "hi": null
+                },
+                "duration": 0,
+                "rate": 20,
+                "radius": 20.4,
+                "length": 0,
+                "spread_deg": 360,
+                "base_deg": -90,
+                "attached": false
+              },
+              {
+                "module": "initial_velocity",
+                "speed": {
+                  "lo": 0.1,
+                  "hi": 0.4
+                },
+                "direction": "random",
+                "cone_deg": 0,
+                "inherit": 0
+              },
+              {
+                "module": "gravity",
+                "scale": -0.012
+              },
+              {
+                "module": "drag",
+                "amount": 0.03
+              },
+              {
+                "module": "wind",
+                "influence": 0.6
+              },
+              {
+                "module": "size_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0.7
+                    ],
+                    [
+                      1,
+                      2
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "alpha_over_life",
+                "curve": {
+                  "points": [
+                    [
+                      0,
+                      0
+                    ],
+                    [
+                      0.12,
+                      0.75
+                    ],
+                    [
+                      1,
+                      0
+                    ]
+                  ]
+                }
+              },
+              {
+                "module": "color_over_life",
+                "gradient": {
+                  "stops": [
+                    [
+                      0,
+                      [
+                        70,
+                        64,
+                        60
+                      ]
+                    ],
+                    [
+                      1,
+                      [
+                        170,
+                        168,
+                        166
+                      ]
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "deps": [],
+  "rev": 1
+}
