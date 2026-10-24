@@ -5,7 +5,7 @@
   "author": "you",
   "schema": 1,
   "engine_min": "0.2.0",
-  "hash": "dc67a059f0b705b7",
+  "hash": "f9f1d296735f3e37",
   "spec": {
     "version": 2,
     "name": "ClusterChickens",
@@ -20,7 +20,7 @@
     "rain_speed": 0,
     "rain_delivery": "none",
     "held": "00634",
-    "cost": 1606,
+    "cost": 2139,
     "particles": [
       {
         "name": "Cluster Missile",
@@ -663,17 +663,24 @@
             "effects": [
               {
                 "fx": "damage_terrain",
-                "size": 111,
-                "force": 8,
+                "size": 90,
+                "force": 0,
                 "player_damage": 45,
                 "brush": "circle",
                 "rotation": 0,
                 "rough": false,
                 "length": 0,
                 "affects": "everyone"
+              },
+              {
+                "fx": "spawn",
+                "target": "Particle 1",
+                "inherit": 0,
+                "rise": 4,
+                "aim": "Up"
               }
             ],
-            "vary": 2.6
+            "vary": 1
           }
         ],
         "fx": [
@@ -1157,5 +1164,5 @@
     ]
   },
   "deps": [],
-  "rev": 1
+  "rev": 2
 }
