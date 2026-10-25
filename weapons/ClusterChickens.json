@@ -5,7 +5,7 @@
   "author": "you",
   "schema": 1,
   "engine_min": "0.2.0",
-  "hash": "f9f1d296735f3e37",
+  "hash": "d5a8d8ba58c782fd",
   "spec": {
     "version": 2,
     "name": "ClusterChickens",
@@ -20,7 +20,7 @@
     "rain_speed": 0,
     "rain_delivery": "none",
     "held": "00634",
-    "cost": 2139,
+    "cost": 41820,
     "particles": [
       {
         "name": "Cluster Missile",
@@ -89,6 +89,22 @@
                 "inherit": 0,
                 "rise": 4,
                 "aim": "Up"
+              }
+            ]
+          },
+          {
+            "kind": "command",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "execute_trigger",
+                "trigger": "timer"
               }
             ]
           }
@@ -681,6 +697,22 @@
               }
             ],
             "vary": 1
+          },
+          {
+            "kind": "command",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "execute_trigger",
+                "trigger": "timer"
+              }
+            ]
           }
         ],
         "fx": [
@@ -1108,8 +1140,8 @@
         "primary": false,
         "graphic": "clusterbomb",
         "art_scale": 1,
-        "count": 4,
-        "spread": 0,
+        "count": 20,
+        "spread": 77,
         "gravity": 0.08,
         "launch_power": 1.15,
         "bounce": 0,
@@ -1134,6 +1166,8 @@
         "tunnel_width": 16,
         "dig_for": 2,
         "max_fall": 0,
+        "angle_vary": 18,
+        "speed_vary": 0.25,
         "type": "projectile",
         "terrain": "collide",
         "homing": "off",
@@ -1157,6 +1191,22 @@
                 "length": 0
               }
             ]
+          },
+          {
+            "kind": "command",
+            "then": "die",
+            "nth": 1,
+            "duration": 0,
+            "mode": "on_completion",
+            "radius": 0,
+            "interval": 0,
+            "affects": "everyone",
+            "effects": [
+              {
+                "fx": "execute_trigger",
+                "trigger": "timer"
+              }
+            ]
           }
         ],
         "fx": []
@@ -1164,5 +1214,5 @@
     ]
   },
   "deps": [],
-  "rev": 2
+  "rev": 3
 }
