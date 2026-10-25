@@ -1,0 +1,17 @@
+{
+  "type": "level",
+  "id": "you/Void Chase",
+  "name": "Void Chase",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "cb10dacd4d7937e8",
+  "spec": {
+    "map": "Long Valley",
+    "mode": "Fire Void",
+    "description": "A wall of fire sweeps in from the left. Reach the far end.",
+    "level_format": 2
+  },
+  "deps": [],
+  "rev": 1
+}
