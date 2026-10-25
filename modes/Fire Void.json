@@ -1,0 +1,122 @@
+{
+  "type": "mode",
+  "id": "you/Fire Void",
+  "name": "Fire Void",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "15e0aea040f23f88",
+  "spec": {
+    "wall_specs": [
+      {
+        "from": "Left",
+        "speed": 170,
+        "every": "per_turn",
+        "substance": "burn",
+        "skin": "",
+        "shots": "detonate",
+        "renderer": "gl_flames",
+        "palette": "void",
+        "sense": "outside",
+        "start": 0,
+        "body_art": "",
+        "edge_art": "",
+        "burn": 35,
+        "afterburn": 10,
+        "catch_fire": false,
+        "type": "Fire Void Wall",
+        "look": {
+          "reach": 480,
+          "glow": 0.45,
+          "embers": 0.08,
+          "turbulence": 0.2,
+          "flame_size": 39,
+          "rise": 50
+        }
+      },
+      {
+        "from": "Bottom",
+        "speed": 20,
+        "every": "per_turn",
+        "substance": "burn",
+        "skin": "",
+        "shots": "pass",
+        "renderer": "gl_projected_plane",
+        "palette": "poison",
+        "sense": "outside",
+        "start": 25,
+        "body_art": "",
+        "edge_art": "",
+        "burn": 35,
+        "afterburn": 10,
+        "catch_fire": false,
+        "at_shore": true,
+        "waits": true,
+        "type": "Poison",
+        "look": {
+          "distance": 0.5,
+          "terrace": 0.5,
+          "spread": 0.02,
+          "sway": 1.2,
+          "haze": 0.55,
+          "blend": 1
+        }
+      },
+      {
+        "from": "Left",
+        "speed": 0,
+        "every": "per_turn",
+        "substance": "block",
+        "skin": "",
+        "shots": "pass",
+        "renderer": "none",
+        "palette": "steel",
+        "sense": "outside",
+        "start": 0,
+        "body_art": "",
+        "edge_art": "",
+        "burn": 35,
+        "afterburn": 10,
+        "catch_fire": false,
+        "type": "Wall"
+      },
+      {
+        "from": "Right",
+        "speed": 0,
+        "every": "per_turn",
+        "substance": "block",
+        "skin": "",
+        "shots": "pass",
+        "renderer": "none",
+        "palette": "steel",
+        "sense": "outside",
+        "start": 0,
+        "body_art": "",
+        "edge_art": "",
+        "burn": 35,
+        "afterburn": 10,
+        "catch_fire": false,
+        "type": "Wall"
+      }
+    ],
+    "edge_format": 2,
+    "cam_restrict": true,
+    "cam_distance": 1400,
+    "cam_over_time": "hold",
+    "timing": "realtime",
+    "turn_order": "round_robin",
+    "win": "reach_goal",
+    "pins": {
+      "sudden_death": "off"
+    },
+    "pin_reasons": {
+      "sudden_death": "a race: the edge is the clock"
+    },
+    "suggest": {},
+    "chase": true,
+    "chase_axis": "x",
+    "description": "A wall of fire sweeps in from the left. Reach the far end."
+  },
+  "deps": [],
+  "rev": 1
+}
