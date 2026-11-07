@@ -1,0 +1,36 @@
+{
+  "type": "map",
+  "id": "you/One Big - Castle",
+  "name": "One Big - Castle",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "358598805f80d483",
+  "spec": {
+    "world_width": 3200,
+    "world_height": 1400,
+    "shape": "arena",
+    "size": "medium",
+    "screens": 3,
+    "shore": 230,
+    "terrain": "one_painting",
+    "water_level": 0.836,
+    "gravity_scale": 1,
+    "background": "down",
+    "land_gravity": "none",
+    "gravity_feel": "controlled",
+    "planet_controls": "surface",
+    "planet_death": "core",
+    "planet_shape": "round",
+    "planet_spacing": "close",
+    "planet_reach": "normal",
+    "backdrop": "sky",
+    "terrain_physics": "rigid",
+    "description": "A rolling landscape, grown fresh every match.",
+    "land": {
+      "painting": "free_3_meadow"
+    }
+  },
+  "deps": [],
+  "rev": 1
+}
