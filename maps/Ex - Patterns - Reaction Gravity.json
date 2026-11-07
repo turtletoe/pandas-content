@@ -1,0 +1,36 @@
+{
+  "type": "map",
+  "id": "you/Ex - Patterns - Reaction Gravity",
+  "name": "Ex - Patterns - Reaction Gravity",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "02536cdfca9b19d1",
+  "spec": {
+    "world_width": 3200,
+    "world_height": 1400,
+    "shape": "arena",
+    "size": "medium",
+    "screens": 3,
+    "shore": 230,
+    "terrain": "math_diffuse",
+    "water_level": 0.836,
+    "gravity_scale": 1,
+    "background": "edges",
+    "land_gravity": "surface",
+    "gravity_feel": "controlled",
+    "planet_controls": "surface",
+    "planet_death": "core",
+    "planet_shape": "round",
+    "planet_spacing": "close",
+    "planet_reach": "normal",
+    "backdrop": "sky",
+    "terrain_physics": "rigid",
+    "description": "A rolling landscape, grown fresh every match.",
+    "land": {
+      "look": "material"
+    }
+  },
+  "deps": [],
+  "rev": 1
+}
