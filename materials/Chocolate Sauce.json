@@ -1,0 +1,114 @@
+{
+  "type": "material",
+  "id": "you/Chocolate Sauce",
+  "name": "Chocolate Sauce",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "f78c9800ab886c3f",
+  "spec": {
+    "version": 1,
+    "family": "liquid",
+    "name": "Chocolate Sauce",
+    "colour": [
+      62,
+      24,
+      8
+    ],
+    "alpha": 0.82,
+    "phase": "liquid",
+    "gas": false,
+    "radius": 20,
+    "rest_density": 2.6,
+    "stiffness": 0.3,
+    "near_stiffness": 1.75,
+    "viscosity_lin": 0.34,
+    "viscosity_quad": 0.01,
+    "gravity": 0.32,
+    "wind": 0,
+    "damping": 0.01,
+    "settle_damping": 0.31,
+    "settle_speed": 2.7,
+    "friction": 0.28,
+    "bounce": 0,
+    "freeze_ticks": 30,
+    "freeze_travel": 1.6,
+    "freeze_depth": 1,
+    "rules": [
+      {
+        "when": "touch_character",
+        "then": "persists",
+        "after": 0,
+        "other": "",
+        "effects": [
+          {
+            "kind": "push",
+            "rate": 0.25,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          },
+          {
+            "kind": "wade",
+            "rate": 0.5,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          }
+        ]
+      },
+      {
+        "when": "touch_prop",
+        "then": "persists",
+        "after": 0,
+        "other": "",
+        "effects": [
+          {
+            "kind": "push",
+            "rate": 0.3,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          }
+        ]
+      }
+    ],
+    "push": 0.25,
+    "wade": 0.5,
+    "prop_damage": 0,
+    "prop_push": 0.3,
+    "prop_set_off": false,
+    "ignites": false,
+    "sleeps": false,
+    "lift": 0,
+    "flammable": false,
+    "explode_damage": 0,
+    "explode_size": 18,
+    "heal": 0,
+    "sicken": 0,
+    "sicken_turns": 0,
+    "erode_spends": false,
+    "erode_size": 24,
+    "erode_dwell": 0,
+    "blast": 0,
+    "blast_size": 40,
+    "blast_needs": 0,
+    "blast_spends": false,
+    "build": 0,
+    "build_size": 24,
+    "build_spends": false,
+    "rest_set": false,
+    "rest_after": 0,
+    "rest_spends": false,
+    "timed_set": false,
+    "timed_after": 0,
+    "timed_spends": false,
+    "glow": 0,
+    "rim": 0.9,
+    "outline": 0,
+    "depth_tint": 0,
+    "render_smooth": 0.7
+  },
+  "deps": [],
+  "rev": 1
+}
