@@ -1,0 +1,134 @@
+{
+  "type": "material",
+  "id": "you/Lava Thik",
+  "name": "Lava Thik",
+  "author": "you",
+  "schema": 1,
+  "engine_min": "0.2.0",
+  "hash": "2ff01eee873118b3",
+  "spec": {
+    "version": 1,
+    "family": "liquid",
+    "name": "Lava Thik",
+    "colour": [
+      226,
+      96,
+      38
+    ],
+    "alpha": 1,
+    "phase": "liquid",
+    "gas": false,
+    "radius": 21,
+    "rest_density": 2,
+    "stiffness": 0.18,
+    "near_stiffness": 0.7,
+    "viscosity_lin": 0.57,
+    "viscosity_quad": 0.26,
+    "gravity": 0.32,
+    "wind": 0,
+    "damping": 0.05,
+    "settle_damping": 0.3,
+    "settle_speed": 2.5,
+    "friction": 0.6,
+    "bounce": 0.06,
+    "freeze_ticks": 30,
+    "freeze_travel": 1.6,
+    "freeze_depth": 1,
+    "rules": [
+      {
+        "when": "rest",
+        "then": "consumed",
+        "after": 5.5,
+        "other": "",
+        "effects": [
+          {
+            "kind": "become_terrain",
+            "rate": 0,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          }
+        ]
+      },
+      {
+        "when": "timer",
+        "then": "consumed",
+        "after": 3.5,
+        "other": "",
+        "effects": [
+          {
+            "kind": "become_terrain",
+            "rate": 0,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          }
+        ]
+      },
+      {
+        "when": "touch_character",
+        "then": "persists",
+        "after": 0,
+        "other": "",
+        "effects": [
+          {
+            "kind": "damage",
+            "rate": 26,
+            "material": "",
+            "size": 0,
+            "needs": 0
+          }
+        ]
+      },
+      {
+        "when": "touch_terrain",
+        "then": "persists",
+        "after": 8,
+        "other": "",
+        "effects": [
+          {
+            "kind": "erode",
+            "rate": 6,
+            "material": "",
+            "size": 60,
+            "needs": 0
+          }
+        ]
+      }
+    ],
+    "push": 0,
+    "ignites": true,
+    "sleeps": false,
+    "lift": 0,
+    "flammable": false,
+    "explode_damage": 0,
+    "explode_size": 18,
+    "heal": 0,
+    "sicken": 0,
+    "sicken_turns": 0,
+    "erode_spends": false,
+    "erode_size": 60,
+    "erode_dwell": 8,
+    "blast": 0,
+    "blast_size": 40,
+    "blast_needs": 0,
+    "blast_spends": false,
+    "build": 0,
+    "build_size": 24,
+    "build_spends": false,
+    "rest_set": true,
+    "rest_after": 5.5,
+    "rest_spends": true,
+    "timed_set": true,
+    "timed_after": 3.5,
+    "timed_spends": true,
+    "glow": 0,
+    "rim": 0.9,
+    "outline": 0,
+    "depth_tint": 0,
+    "render_smooth": 0.7,
+    "cost": 1
+  },
+  "deps": [],
+  "rev": 1
+}
