@@ -5,13 +5,13 @@
   "author": "you",
   "schema": 1,
   "engine_min": "0.2.0",
-  "hash": "2a73b9cb0022004b",
+  "hash": "73db90ec20b09e3d",
   "spec": {
     "version": 3,
     "name": "-P- Machine Gun",
     "spawn_point": "player",
     "held": "00633",
-    "cost": 1372,
+    "cost": 1708,
     "particles": [
       {
         "name": "Cluster Missile",
@@ -27,7 +27,6 @@
         "fly_speed": 5,
         "steer": 3,
         "walk_speed": 1,
-        "jump_power": 1,
         "start_direction": "Away",
         "range_px": 1200,
         "emits": "",
@@ -64,7 +63,7 @@
             "effects": [
               {
                 "fx": "damage_terrain",
-                "size": 10,
+                "size": 15,
                 "force": 5,
                 "player_damage": 3,
                 "brush": "circle",
@@ -634,5 +633,5 @@
     ]
   },
   "deps": [],
-  "rev": 1
+  "rev": 2
 }
